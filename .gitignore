@@ -1,0 +1,41 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.jks
+*.keystore
+/keystore.properties
+/keystore/
+.kotlin/
+
+# Generated test-model suite (rebuild with tools/generate_test_models.py)
+/test-models/*
+!/test-models/README.md
+
+# Local tooling and private reference copies
+/.tools/
+/reference/
+node_modules/
+
+# Signing secrets (never commit)
+*.p12
+*.pem
+
+# Reconstruction tools: fetched sources and build output (tools/recon/build.sh)
+tools/recon/work/
+
+# Personal notes and tools, never published
+/docs/planning/
+/cleanroom-refiner/
+__pycache__/
+
+# Locally built release APKs and notes (published as GitHub release assets, never committed)
+/release/

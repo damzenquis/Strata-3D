@@ -1,0 +1,17 @@
+# Normalise line endings in the repository; keep platform-specific scripts usable.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+gradlew text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jar binary
+*.apk binary
+*.glb binary
+*.stl binary
+*.3mf binary
+*.ply binary
+*.zip binary
+*.jks binary

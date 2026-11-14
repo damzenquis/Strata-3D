@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Entry points in the viewer -->
+    <string name="capture_entry">Captures</string>
+    <string name="capture_object">Capture an object</string>
+
+    <!-- Library -->
+    <string name="captures_title">Captures</string>
+    <string name="capture_new">New capture</string>
+    <string name="captures_empty_title">Capture your first object</string>
+    <string name="captures_empty_body">Walk around an object with your phone. Strata:3D takes sharp photos from every side, ready for 3D reconstruction.</string>
+    <string name="capture_untitled">Capture %1$s</string>
+    <string name="capture_stats">%1$d photos · %2$d%% covered · %3$s</string>
+    <string name="capture_interrupted">Interrupted · %1$d photos kept</string>
+    <string name="capture_rename">Rename</string>
+    <string name="capture_export">Export .zip</string>
+    <string name="capture_delete">Delete</string>
+    <string name="capture_delete_title">Delete this capture?</string>
+    <string name="capture_delete_body">Its %1$d photos are removed from this phone. This can\'t be undone.</string>
+    <string name="capture_rename_title">Rename capture</string>
+    <string name="capture_name_hint">Name</string>
+    <string name="capture_exporting">Exporting %1$d%%…</string>
+    <string name="capture_exported">Capture exported</string>
+    <string name="capture_export_failed">Export failed. Check the free space where you saved it.</string>
+    <string name="capture_more">More options</string>
+    <string name="capture_device_report">Device report</string>
+    <string name="capture_back">Back</string>
+    <string name="capture_copy">Copy</string>
+    <string name="capture_copied">Copied</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+
+    <!-- ARCore notice (Google's required disclosure) -->
+
+    <!-- Availability and permission -->
+    <string name="capture_permission_title">Camera access needed</string>
+    <string name="capture_permission_body">Strata:3D uses the camera only while you capture. Photos are saved on this phone.</string>
+    <string name="capture_permission_allow">Allow camera</string>
+    <string name="capture_permission_settings">Open settings</string>
+
+    <!-- Capture screen -->
+    <string name="capture_close">Close capture</string>
+    <string name="capture_done">Done</string>
+    <string name="capture_coverage_desc">%1$d%% of the object covered</string>
+    <string name="capture_leave_title">Keep this capture?</string>
+    <string name="capture_leave_body">%1$d photos taken so far.</string>
+    <string name="capture_keep">Keep</string>
+    <string name="capture_discard">Discard</string>
+    <string name="capture_error_title">Capture stopped</string>
+
+    <string name="guide_hot">Phone is hot. Paused until it cools down</string>
+    <string name="guide_low_storage">Storage is almost full. Capture paused</string>
+    <string name="guide_paused">Paused</string>
+
+    <!-- Summary -->
+    <string name="capture_saved">Capture saved</string>
+    <string name="capture_summary_photos">Photos</string>
+    <string name="capture_summary_covered">Covered</string>
+    <string name="capture_summary_size">Storage</string>
+    <string name="capture_summary_missing_low">Missing: some low angles.</string>
+    <string name="capture_summary_missing_mid">Missing: some angles from above.</string>
+    <string name="capture_summary_complete">Every side is covered.</string>
+    <string name="capture_summary_next">Reconstruction arrives in a later update.</string>
+
+    <!-- CameraX capture: object tap, smart shutter (approved mockups A–E, 2026-11-11). -->
+    <string name="capture_tap_object">Tap the object you\'re capturing to start</string>
+    <string name="capture_keep_moving">Keep moving around</string>
+    <string name="capture_hold_steady">Hold steady</string>
+    <string name="capture_saving_photo">Saving photo…</string>
+    <string name="capture_manual_hint">Press the shutter for each photo</string>
+    <string name="capture_photo_failed">The last photo couldn\'t be saved. Smart shutter paused</string>
+    <string name="capture_no_sensors">This phone has no motion sensors for the smart shutter. Use the manual shutter</string>
+    <string name="capture_count">%1$d · 40 or more</string>
+    <string name="capture_mode_smart">Smart</string>
+    <string name="capture_mode_manual">Manual</string>
+    <string name="capture_pause_short">Pause</string>
+    <string name="capture_resume">Resume</string>
+    <string name="capture_shutter_desc">Take photo</string>
+    <string name="capture_shutter_locked">Shutter locked until the object is marked</string>
+    <string name="capture_shutter_setting">Shutter</string>
+    <string name="capture_shutter_smart_desc">Takes a photo when you\'ve moved far enough and the phone is steady</string>
+    <string name="capture_shutter_manual_desc">You press the shutter for every photo</string>
+</resources>

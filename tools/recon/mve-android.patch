@@ -1,0 +1,32 @@
+diff --git a/apps/makescene/makescene.cc b/apps/makescene/makescene.cc
+index 3664f52..70faee4 100644
+--- a/apps/makescene/makescene.cc
++++ b/apps/makescene/makescene.cc
+@@ -150,9 +150,12 @@ load_16bit_image (std::string const& fname)
+     std::string ext5 = util::string::right(lcfname, 5);
+     try
+     {
++#ifndef MVE_NO_TIFF_SUPPORT
+         if (ext4 == ".tif" || ext5 == ".tiff")
+             return mve::image::load_tiff_16_file(fname);
+-        else if (ext4 == ".ppm")
++        else
++#endif
++        if (ext4 == ".ppm")
+             return mve::image::load_ppm_16_file(fname);
+     }
+     catch (...)
+@@ -171,9 +174,12 @@ load_float_image (std::string const& fname)
+     std::string ext5 = util::string::right(lcfname, 5);
+     try
+     {
++#ifndef MVE_NO_TIFF_SUPPORT
+         if (ext4 == ".tif" || ext5 == ".tiff")
+             return mve::image::load_tiff_float_file(fname);
+-        else if (ext4 == ".pfm")
++        else
++#endif
++        if (ext4 == ".pfm")
+             return mve::image::load_pfm_file(fname);
+     }
+     catch (...)

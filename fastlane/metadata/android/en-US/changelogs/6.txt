@@ -1,0 +1,6 @@
+* First release as Strata:3D, a new app with its own identity
+* New formats: PLY (ASCII and binary), 3MF and glTF/GLB
+* New look: Strata:3D logo and icon, light/dark toggle that is remembered, settings side panel
+* 3MF: multi-part objects (components) and Bambu Studio / Orca Slicer project files now open
+* PLY: fixed binary little-endian files that use 16-bit values
+* glTF: Draco, meshopt and quantized compression, sparse accessors, and glTFs with a separate .bin (pick the files together, or open a .zip)

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- On-device reconstruction (service notification and progress). -->
+    <string name="recon_channel">Building models</string>
+    <string name="recon_notification_title">Building 3D model</string>
+    <string name="recon_notification_starting">Starting…</string>
+    <string name="recon_stage_import">Preparing photos</string>
+    <string name="recon_stage_cameras">Placing the photos</string>
+    <string name="recon_stage_box">Finding the object</string>
+    <string name="recon_stage_depth">Measuring depth</string>
+    <string name="recon_stage_points">Building the point cloud</string>
+    <string name="recon_stage_surface">Building the surface</string>
+    <string name="recon_stage_ground">Removing the surface underneath</string>
+    <string name="recon_stage_clean">Cleaning up</string>
+    <string name="recon_stage_texture">Adding colour</string>
+    <string name="recon_stage_steps">%1$s (%2$d of %3$d)</string>
+
+    <!-- Build card on the capture summary (approved mockups A-E, 2026-11-11). -->
+    <string name="recon_build_title">Build a 3D model</string>
+    <string name="recon_build_body">Runs on this phone, about 5–25 min. You can leave the app; it keeps going.</string>
+    <string name="recon_build">Build model</string>
+    <string name="recon_building">Building 3D model</string>
+    <string name="recon_step">Step %1$d of %2$d · %3$s</string>
+    <string name="recon_elapsed">%1$s so far</string>
+    <string name="recon_leave_hint">You can leave the app. Progress is also in the notification.</string>
+    <string name="recon_placed_detail">%1$s · %2$d of %3$d</string>
+    <string name="recon_ready">Model ready</string>
+    <string name="recon_ready_time">Built in %1$s</string>
+    <string name="recon_ready_stats">Built in %1$s · %2$d of %3$d photos used · %4$s points</string>
+    <string name="recon_ready_gaps">%1$d photos couldn\'t be placed (plain or shiny areas). The model may have gaps there.</string>
+    <string name="recon_open">Open in viewer</string>
+    <string name="recon_build_again">Build again</string>
+    <string name="recon_failed">Model couldn\'t be built</string>
+    <string name="recon_try_again">Try again</string>
+    <string name="recon_cancelled_note">The last build was cancelled.</string>
+    <string name="recon_minutes_seconds">%1$d min %2$d s</string>
+    <string name="recon_seconds">%1$d s</string>
+    <string name="recon_err_unsupported">This phone\'s processor isn\'t supported for building models.</string>
+    <string name="recon_err_storage">There isn\'t enough free storage. Free up some space and try again.</string>
+    <string name="recon_err_memory">The phone ran low on memory, so building stopped to keep it running smoothly. Close other apps and try again.</string>
+    <string name="recon_err_placed">Too few photos could be placed to build a model. Try a new capture, going slowly around the object.</string>
+    <string name="recon_err_no_object">The photos don\'t circle one object. Try a new capture, walking around the object and keeping it centred.</string>
+    <string name="recon_err_tap">The object you tapped isn\'t the one the photos centre on. Try a new capture and tap the object you walk around.</string>
+    <string name="recon_err_tool">Something went wrong while building. Try again.</string>
+    <string name="recon_err_interrupted">Building stopped unexpectedly. Try again.</string>
+
+    <!-- Box review (approved mockups 2, 3, F, G, 2026-11-11). -->
+    <string name="recon_review_switch">Review the box before building</string>
+    <string name="recon_review_switch_body">Off: the app fits the box itself and builds without stopping. On: it pauses after placing the photos so you can check the box.</string>
+    <string name="recon_review_title">Check the box</string>
+    <string name="recon_review_body">The photos are placed (%1$d of %2$d). The app found the object; check the box around it, then building continues.</string>
+    <string name="recon_review_notification">Photos placed. Tap to check the box and continue.</string>
+    <string name="recon_review_photo">Photo %1$d of %2$d</string>
+    <string name="recon_review_reset">Reset</string>
+    <string name="recon_review_unavailable">This box can\'t be shown on the photos.</string>
+    <!-- Real-world size of a built model (one measurement; the rest follows from the photos). -->
+    <string name="size_row_label">Real size</string>
+    <string name="size_add_optional">Add (optional)</string>
+    <string name="size_row_height">Height %1$s</string>
+    <string name="size_row_width">Width %1$s</string>
+    <string name="size_title_height">How tall is the object?</string>
+    <string name="size_title_width">How wide is the object?</string>
+    <string name="size_body_height">From the surface it stands on to its top. A rough number is fine.</string>
+    <string name="size_body_width">Across its widest side, seen from above. A rough number is fine.</string>
+    <string name="size_axis_height">Height</string>
+    <string name="size_axis_width">Width</string>
+    <string name="size_follow_height">Width and depth follow from the photos.</string>
+    <string name="size_follow_width">Height and depth follow from the photos.</string>
+    <string name="size_value_label">Size</string>
+    <string name="size_skip">Skip</string>
+    <string name="size_save">Save</string>
+    <string name="size_error_number">Enter a number, like 25 or 12.5</string>
+    <string name="size_error_range">Enter a size between %1$s and %2$s</string>
+    <string name="size_not_set">Size not set</string>
+    <string name="size_add">Add size</string>
+    <string name="size_edit">Edit</string>
+    <string name="size_failed">Couldn\'t apply the size. Try again.</string>
+    <string name="recon_preview_description">Picture of the built model</string>
+    <string name="export_model">Export model</string>
+    <string name="export_glb">GLB</string>
+    <string name="export_glb_body">One file with the colours inside. Opens in most 3D apps, web viewers and game engines.</string>
+    <string name="export_obj">OBJ (.zip)</string>
+    <string name="export_obj_body">The model, its materials and colour images, for editors such as Blender.</string>
+    <string name="export_about_size">about %1$s</string>
+    <string name="export_sized">Saved at its real size.</string>
+    <string name="export_unsized">This model has no real size yet, so its units are arbitrary. Add a size first to export it at real size.</string>
+    <string name="export_save">Save</string>
+    <string name="export_share">Share</string>
+    <string name="export_writing">Writing %1$s… %2$d%%</string>
+    <string name="export_saved">Saved</string>
+    <string name="export_open">Open</string>
+    <string name="export_no_app">No app on this phone opens this file type.</string>
+    <string name="export_failed">The export didn\'t finish. Try again.</string>
+</resources>

@@ -1,0 +1,4 @@
+* Scan an object with your phone: tap it, walk around it, and a smart shutter takes the photos
+* Build a textured 3D model on the phone, with no internet; check the box around the object first if you like
+* Give it a real size, see its photo colours, and export it as GLB or OBJ
+* glTF models now stand upright; files that aren't 3D models are refused

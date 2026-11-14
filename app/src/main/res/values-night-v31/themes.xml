@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode keeps the light launch-screen background so the black-and-cyan logo stays visible (see values-v31). -->
+    <style name="Theme.Strata" parent="Theme.Strata.Dark">
+        <item name="android:windowSplashScreenBackground">@color/window_background_light</item>
+    </style>
+</resources>

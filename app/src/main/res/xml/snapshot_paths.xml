@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only the private snapshot and export caches are ever exposed, and only through temporary content-URI grants. -->
+<paths>
+    <cache-path name="snapshots" path="snapshots/" />
+    <cache-path name="exports" path="exports/" />
+</paths>

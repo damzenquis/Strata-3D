@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Manifest default (follows the system). MainActivity switches to the Light/Dark variant the user saved. -->
+    <style name="Theme.Strata" parent="Theme.Strata.Light" />
+
+    <style name="Theme.Strata.Light" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background_light</item>
+    </style>
+
+    <style name="Theme.Strata.Dark" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/window_background_dark</item>
+    </style>
+</resources>

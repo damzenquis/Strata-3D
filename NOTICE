@@ -1,0 +1,30 @@
+Strata:3D
+Copyright 2026 Strata:3D contributors
+
+Strata:3D is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version. It is distributed WITHOUT ANY WARRANTY; see LICENSE.
+
+This product is a modified version of "3D Model Viewer"
+(https://github.com/nini1294/3d-model-viewer), Copyright nini1294,
+licensed under the Apache License, Version 2.0; see
+third_party/3d-model-viewer-LICENSE.txt. The original code keeps that licence;
+Strata:3D as a whole is distributed under the GNU AGPL, version 3 or later.
+
+Changes from the original include: renamed application and package
+(app.strata3d), new branding and icon, PLY / 3MF / glTF / GLB parsers,
+a redesigned top bar with a settings side panel, and a persistent
+light/dark theme toggle.
+
+Third-party software
+--------------------
+Openize.Drako for Java (https://github.com/openize-drako/Openize.Drako-for-Java),
+used to decode Draco-compressed glTF meshes.
+Copyright (c) 2024 Openize Pty Ltd. Licensed under the MIT License;
+see third_party/Openize.Drako-LICENSE.txt.
+
+meshoptimizer (https://github.com/zeux/meshoptimizer): app/src/main/java/app/strata3d/model/MeshoptDecoder.kt
+is a Kotlin port of meshoptimizer's reference decoder (meshopt_decoder_reference.js).
+Copyright (c) 2016-2026 Arseny Kapoulkine. Licensed under the MIT License;
+see third_party/meshoptimizer-LICENSE.md.

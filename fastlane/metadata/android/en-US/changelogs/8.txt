@@ -1,0 +1,4 @@
+* Section: cut the model along X, Y or Z; closed models get a filled cut that shows wall thickness
+* Mesh check: open edges, non-manifold edges, flipped and inside-out parts, highlighted in 3D
+* Measurement in real units (file's unit or your choice per file), snapping only to visible vertices
+* Compact toolbar that fits 360 dp phones; non-model files are rejected with a clear message

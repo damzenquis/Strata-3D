@@ -1,0 +1,4 @@
+* Standard views: perspective or orthographic, one-tap Top, Front, Side and Iso, and Fit, from a collapsible rail
+* Snapshot & Share: transparent or framed PNGs at Screen, 2x or 4K, shared or saved
+* Recent Files: your last models with thumbnails on the start screen, reopened in one tap
+* Dedicated landscape layout and better support for small screens

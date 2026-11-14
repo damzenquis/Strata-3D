@@ -1,0 +1,42 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: File type
+      description: For example, binary STL, 3MF from Bambu Studio, or glTF with Draco.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+  - type: input
+    id: version
+    attributes:
+      label: Strata:3D version
+      description: Android Settings → Apps → Strata:3D → App details (shows the version).
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Pixel 7, Android 16
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Sample file, screenshots or logs
+      description: A sample file that reproduces the problem helps the most. Only attach files you have the right to share.

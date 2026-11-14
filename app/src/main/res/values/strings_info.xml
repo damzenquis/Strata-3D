@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings: Support, Help, About, Credits, License (each opens a full-screen page). -->
+    <string name="info_support">Support</string>
+    <string name="info_help">Help</string>
+    <string name="info_about">About</string>
+    <string name="info_credits">Credits</string>
+    <string name="info_license">License</string>
+    <string name="info_close">Close</string>
+    <string name="info_version">%1$s (build %2$d)</string>
+
+    <string name="support_body">View my projects at GitHub: https://github.com/damzenquis\n\nBuy me a coffee and drop an idea while you\'re at it: https://ko-fi.com/damzenquis</string>
+
+    <string name="about_body">Strata:3D is a 3D viewer and scanner that works entirely on your phone. Open STL, OBJ, PLY, 3MF, glTF and GLB models to turn, measure, slice, check and save them. Or capture a real object: walk around it with the camera, and the app builds a textured 3D model from your photos right on the phone, with no internet connection and no account. Your files and photos never leave your phone unless you choose to share them.</string>
+    <string name="about_thanks">See Credits for a full list of every project this app was built on. Thanks, and enjoy!</string>
+
+    <string name="license_copyright">Copyright (C) 2026 David Morales</string>
+    <string name="license_body">This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.\n\nParts of this app come from other open source projects under their own licences; see Credits and the third-party notices below.\n\nGet the source code, report a problem or ask a question at: https://github.com/damzenquis</string>
+    <string name="license_full">Full licence text (GNU AGPL v3)</string>
+    <string name="license_notices">Third-party notices</string>
+
+    <string name="help_body">OPENING A MODEL\n1. Open the settings menu (top right) and tap Open model, or open a file from another app with Strata:3D.\n2. Strata:3D opens STL, OBJ, PLY, 3MF, glTF and GLB files, and ZIP files that contain one of them. Other files are refused with a message.\n3. Recently opened models are listed on the start screen and under Recent files.\n\nLOOKING AROUND\n1. Drag with one finger to turn the model. Pinch to zoom. Drag with two fingers to move it.\n2. The buttons on the right switch between perspective and flat views, show the model from the top, front, side or at an angle, and fit it to the screen.\n3. The buttons at the bottom change the look: solid, solid with edges, or wireframe. Models built in the app can also show their photo colours.\n4. Measure: tap two points to get the distance between them. Section: cut through the model to see inside. Snapshot: save a picture of the view.\n5. The i button shows the model\'s details and runs a mesh check, which reports problems such as holes or overlapping surfaces.\n\nSCANNING A REAL OBJECT\n1. Open the settings menu and tap Captures, then start a new capture.\n2. Choose a good spot: even, bright light without harsh shadows; the object standing on a surface with some pattern or texture; room to walk all the way around it.\n3. Tap the object on the screen. The camera won\'t take photos until you do.\n4. Walk slowly around the object, keeping it in the middle of the picture. With the smart shutter (the default), photos are taken for you whenever the phone is steady and has moved to a new angle. Hold steady when the app asks you to.\n5. Go all the way around once at about the object\'s height, then again from a bit higher, looking down at it. The coverage dial shows which angles are still missing.\n6. Take 40 or more photos. More is better for objects with plain sides.\n7. Tap Done. The capture is saved with its photos.\n\nWHAT SCANS WELL\n• Objects with visible detail, pattern or texture, in a matte finish.\n• Hard to scan: clear glass, mirrors and shiny metal (they show their surroundings, not themselves), and large plain areas with no detail. These can come out with holes or flat, guessed patches.\n• The object must stay still. Move around it, not the other way round.\n\nBUILDING THE 3D MODEL\n1. In the capture, tap Build model. Building takes a few minutes and runs in the background; you can leave the app.\n2. Optional: turn on Review the box before building to check and adjust the box around the object before the model is built.\n3. When the model is ready, tap Open in viewer.\n4. Optional: give the real size. Tap Add size on the Model ready card and enter the object\'s height or width. The other measurements follow.\n5. Export model saves it as a GLB or OBJ file for other apps.\n\nIF A BUILD FAILS\n• Too few photos placed: take more photos, with more overlap between them, in better light.\n• No object found: make sure the object stays in the middle of the photos all the way around.\n• Not enough memory: close other apps and try again.</string>
+
+    <!-- Credits: one line per project ("name" by author (link) = what it does here). -->
+    <string name="credit_viewer">the original 3D viewer this app grew from</string>
+    <string name="credit_drako">decoding Draco-compressed glTF models</string>
+    <string name="credit_meshopt">decoding meshoptimizer-compressed glTF models</string>
+    <string name="credit_mve">importing photos, placing the cameras, and cleaning up the built model</string>
+    <string name="credit_texturing">colouring the built model from the photos</string>
+    <string name="credit_mapmap">choosing which photo colours each part of the model</string>
+    <string name="credit_rayint">checking which parts of the model each photo can see</string>
+    <string name="credit_openmvs">measuring depth from the photos and building the model\'s surface</string>
+    <string name="credit_opencv">image processing inside the model builder</string>
+    <string name="credit_boost">general-purpose C++ building blocks for the model builder</string>
+    <string name="credit_cgal">the geometry that builds the model\'s surface</string>
+    <string name="credit_vcg">cleaning and simplifying the built surface</string>
+    <string name="credit_nanoflann">fast nearest-point searches while building</string>
+    <string name="credit_eigen">the maths (matrices and vectors) in the model builder</string>
+    <string name="credit_tbb">running the colouring step on several processor cores</string>
+    <string name="credit_libjpeg">reading the photos</string>
+    <string name="credit_libpng">reading and writing images inside the model builder</string>
+    <string name="credit_llvm_omp">running the model builder on several processor cores</string>
+    <string name="credit_androidx">the app\'s screens, camera and photo handling</string>
+</resources>

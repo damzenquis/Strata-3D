@@ -1,0 +1,39 @@
+diff --git a/libs/tex/generate_texture_views.cpp b/libs/tex/generate_texture_views.cpp
+index f473a12..80ad3d0 100644
+--- a/libs/tex/generate_texture_views.cpp
++++ b/libs/tex/generate_texture_views.cpp
+@@ -179,7 +179,7 @@ void
+ from_nvm_scene(std::string const & nvm_file,
+     std::vector<TextureView> * texture_views, std::string const & tmp_dir)
+ {
+-    std::vector<mve::NVMCameraInfo> nvm_cams;
++    std::vector<mve::AdditionalCameraInfo> nvm_cams;
+     mve::Bundle::Ptr bundle = mve::load_nvm_bundle(nvm_file, &nvm_cams);
+     mve::Bundle::Cameras& cameras = bundle->get_cameras();
+ 
+@@ -188,7 +188,7 @@ from_nvm_scene(std::string const & nvm_file,
+     for (std::size_t i = 0; i < cameras.size(); ++i) {
+         view_counter.progress<SIMPLE>();
+         mve::CameraInfo& mve_cam = cameras[i];
+-        mve::NVMCameraInfo const& nvm_cam = nvm_cams[i];
++        mve::AdditionalCameraInfo const& nvm_cam = nvm_cams[i];
+ 
+         mve::ByteImage::Ptr image = mve::image::load_file(nvm_cam.filename);
+ 
+diff --git a/libs/tex/texture_view.cpp b/libs/tex/texture_view.cpp
+index 067cb49..8c6ff74 100644
+--- a/libs/tex/texture_view.cpp
++++ b/libs/tex/texture_view.cpp
+@@ -223,9 +223,9 @@ TextureView::get_face_info(math::Vec3f const & v1, math::Vec3f const & v2,
+         if (num_samples > 0) {
+             gmi = (gmi / num_samples) * area;
+         } else {
+-            double gmv1 = static_cast<double>(gradient_magnitude->linear_at(p1[0], p1[1], 0)) / 255.0;
+-            double gmv2 = static_cast<double>(gradient_magnitude->linear_at(p2[0], p2[1], 0)) / 255.0;
+-            double gmv3 = static_cast<double>(gradient_magnitude->linear_at(p3[0], p3[1], 0)) / 255.0;
++            double gmv1 = static_cast<double>(gradient_magnitude->linear_at(p1[0], p1[1], std::int64_t(0))) / 255.0;
++            double gmv2 = static_cast<double>(gradient_magnitude->linear_at(p2[0], p2[1], std::int64_t(0))) / 255.0;
++            double gmv3 = static_cast<double>(gradient_magnitude->linear_at(p3[0], p3[1], std::int64_t(0))) / 255.0;
+             gmi = ((gmv1 + gmv2 + gmv3) / 3.0) * area;
+         }
+     }

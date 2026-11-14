@@ -1,0 +1,99 @@
+diff --git a/build/Utils.cmake b/build/Utils.cmake
+index 28cc3e5..ef7929c 100644
+--- a/build/Utils.cmake
++++ b/build/Utils.cmake
+@@ -116,7 +116,7 @@ macro(GetOperatingSystemArchitectureBitness)
+ 
+ 	# Detect GNU version:
+ 	set(CMAKE_FLG_GCC_VERSION_NUM 0)
+-	if(CMAKE_COMPILER_IS_GNUCXX)
++	if(CMAKE_COMPILER_IS_GNUCXX AND NOT ANDROID)
+ 		execute_process(COMMAND ${CMAKE_CXX_COMPILER} --version
+ 					  OUTPUT_VARIABLE CMAKE_FLG_GCC_VERSION_FULL
+ 					  OUTPUT_STRIP_TRAILING_WHITESPACE)
+diff --git a/libs/Common/EventQueue.cpp b/libs/Common/EventQueue.cpp
+index 82f835b..fccfa41 100644
+--- a/libs/Common/EventQueue.cpp
++++ b/libs/Common/EventQueue.cpp
+@@ -80,7 +80,7 @@ bool EventQueue::IsEmpty() const
+ 	return m_events.IsEmpty();
+ }
+ 
+-uint_t EventQueue::GetSize() const
++SEACAVE::uint_t EventQueue::GetSize() const
+ {
+ 	Lock l(m_cs);
+ 	return m_events.GetSize();
+diff --git a/libs/Common/Log.h b/libs/Common/Log.h
+index b6f2172..bd3816d 100644
+--- a/libs/Common/Log.h
++++ b/libs/Common/Log.h
+@@ -14,8 +14,10 @@
+ 
+ // D E F I N E S ///////////////////////////////////////////////////
+ 
+-// use file handles to access console
++// use file handles to access console (not on Android, where FILE is an opaque type)
++#ifndef __ANDROID__
+ #define _USE_COSOLEFILEHANDLES
++#endif
+ 
+ //#define LOG_DATE // add date info for every log
+ #define LOG_TIME // add time info for every log
+diff --git a/libs/Common/Types.inl b/libs/Common/Types.inl
+index 765db20..0978621 100644
+--- a/libs/Common/Types.inl
++++ b/libs/Common/Types.inl
+@@ -3660,7 +3660,7 @@ namespace boost {
+ // include headers that implement compressed serialization support
+ #include <boost/iostreams/filtering_streambuf.hpp>
+ #include <boost/iostreams/filter/zlib.hpp>
+-#if BOOST_VERSION >= 106900
++#if BOOST_VERSION >= 106900 && !defined(__ANDROID__)
+ #include <boost/iostreams/filter/zstd.hpp>
+ #endif
+ #if defined(_MSC_VER)
+@@ -3674,7 +3674,7 @@ enum ARCHIVE_TYPE {
+ 	ARCHIVE_BINARY_ZIP,
+ 	ARCHIVE_BINARY_ZSTD,
+ 	ARCHIVE_LAST,
+-	#if BOOST_VERSION >= 106900
++	#if BOOST_VERSION >= 106900 && !defined(__ANDROID__)
+ 	ARCHIVE_DEFAULT = ARCHIVE_BINARY_ZSTD
+ 	#else
+ 	ARCHIVE_DEFAULT = ARCHIVE_BINARY_ZIP
+@@ -3703,7 +3703,7 @@ bool SerializeSave(const TYPE& obj, std::ofstream& fs, ARCHIVE_TYPE type, unsign
+ 		boost::archive::binary_oarchive ar(ffs, flags);
+ 		ar << obj;
+ 		break; }
+-	#if BOOST_VERSION >= 106900
++	#if BOOST_VERSION >= 106900 && !defined(__ANDROID__)
+ 	case ARCHIVE_BINARY_ZSTD: {
+ 		namespace io = boost::iostreams;
+ 		io::filtering_streambuf<io::output> ffs;
+@@ -3753,7 +3753,7 @@ bool SerializeLoad(TYPE& obj, std::ifstream& fs, ARCHIVE_TYPE type, unsigned fla
+ 			boost::archive::binary_iarchive ar(ffs, flags);
+ 			ar >> obj;
+ 			break; }
+-		#if BOOST_VERSION >= 106900
++		#if BOOST_VERSION >= 106900 && !defined(__ANDROID__)
+ 		case ARCHIVE_BINARY_ZSTD: {
+ 			namespace io = boost::iostreams;
+ 			io::filtering_streambuf<io::input> ffs;
+diff --git a/libs/IO/CMakeLists.txt b/libs/IO/CMakeLists.txt
+index 7aa172f..d863ca2 100644
+--- a/libs/IO/CMakeLists.txt
++++ b/libs/IO/CMakeLists.txt
+@@ -60,8 +60,10 @@ if(JPEG_FOUND)
+ else()
+ 	SET(JPEG_LIBRARIES "")
+ endif()
+-FIND_PACKAGE(PkgConfig REQUIRED)
+-pkg_check_modules_fullpath_libs(JPEGXL libjxl)
++FIND_PACKAGE(PkgConfig QUIET)
++if(PKG_CONFIG_FOUND)
++	pkg_check_modules_fullpath_libs(JPEGXL libjxl)
++endif()
+ if(JPEGXL_FOUND)
+ 	SET(_USE_JXL TRUE CACHE INTERNAL "")
+ 	set(JPEGXL_LIBRARIES ${JPEGXL_FULLPATH_LIBRARIES})

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Android 12+ draws the launch screen from this theme: the app icon's logo on windowSplashScreenBackground.
+        The logo is black ink with a cyan S, so the launch screen always uses the light background, in dark mode
+        too (values-night-v31). The app switches to the saved theme as soon as it starts.
+    -->
+    <style name="Theme.Strata" parent="Theme.Strata.Light">
+        <item name="android:windowSplashScreenBackground">@color/window_background_light</item>
+    </style>
+</resources>

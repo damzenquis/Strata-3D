@@ -1,0 +1,31 @@
+Strata:3D is a fast, lightweight, open-source 3D model viewer for Android. No ads, no trackers, and no internet permission.
+
+<b>Formats</b>
+* STL (binary and ASCII), including CAD exports with unusual headers
+* Wavefront OBJ: triangles, quads and n-gons
+* PLY: ASCII and binary, as written by 3D scanners
+* 3MF: including multi-part objects and Bambu Studio / Orca Slicer project files
+* glTF and GLB: including Draco, meshopt and quantized compression
+* glTFs with a separate .bin file: select the files together, or open a .zip
+
+<b>Viewing</b>
+* Smooth OpenGL ES 3.0 rendering of multi-million-triangle models with 4x anti-aliasing
+* Solid, Solid + edges and Wireframe modes
+* Drag to orbit, two fingers to pan, pinch to zoom, double-tap to reset
+* Build-plate grid that adapts to the model's size
+* Choice of model colours
+* Perspective or orthographic view, with one-tap Top, Front, Side and Iso views
+* Portrait and landscape layouts
+
+<b>Inspecting</b>
+* Measure the distance between two points, with ΔX/ΔY/ΔZ, in real units, with snapping to visible vertices
+* Section: cut the model along X, Y or Z to see inside; closed models get a filled cut that shows wall thickness
+* Mesh check: find open edges, non-manifold edges and flipped or inside-out parts, highlighted in 3D
+* Model info: triangle count, dimensions in mm, volume, surface area, file size and load time
+* File location, and saving a copy as a new file
+
+<b>Everyday use</b>
+* Snapshot & Share: transparent or framed PNG images up to 4K
+* Recent Files: reopen your last models in one tap
+* Open models from the file picker, "Open with" in any file manager, or the Share sheet
+* Light and dark themes with a one-tap toggle that remembers your choice
